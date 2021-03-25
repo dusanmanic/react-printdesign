@@ -1,0 +1,39 @@
+.pc-buttons {
+    width: 400px;
+    height: 6vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    
+}
+
+.dropdown-hide {
+    margin-top: -200px;
+    transition-property: all;
+    transition-duration: .5s;  
+}
+
+.dropdown-show {
+    margin-top: 0px;
+    transition-property: all;
+    transition-duration: .5s;  
+}
+
+@media only screen and (max-width: 600px) {
+
+    .pc-buttons {
+        display: none;
+    }
+
+    .mob-buttons {
+        width: 100vw;
+        height: 150px;
+        position: relative;
+        z-index: 9;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        background-color: rgb(255, 255, 255, 0.2);
+    }
+
+}

@@ -1,0 +1,89 @@
+.container {
+    width: 100vw;
+    height: 6vh;
+}
+
+.header {
+    width: 100vw;
+    height: 6vh;
+    background-color: rgb(50, 50, 50);
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo-holder {
+    width: 70px;
+    height: 30px;
+    background-size: cover;
+    background-position: center;
+    margin-top: 11px;
+    position: relative;
+    z-index: 12;
+}
+
+.mobile-view {
+    display: none;
+}
+
+.signin-holder {
+    width: 70px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+button {    
+    color:red;
+    font-size: 15px; 
+    background-color: transparent;
+    background-repeat:no-repeat;
+    border: none;
+    cursor:pointer;
+    overflow: hidden;        
+}
+
+button:active {
+    outline: none;
+    border: none;
+}
+
+button:focus {outline:0;}
+
+a {
+    text-decoration: none;
+    color:red;
+    font-size: 15px;
+}
+
+
+@media only screen and (max-width: 600px) {
+
+    .header {
+        width: 100vw;
+        height: 6vh;
+        background-color: rgb(50, 50, 50);
+        display: flex;
+        justify-content: space-between;
+        position: relative;
+        z-index: 10;
+    }
+
+    .buttons {
+        width: 150px;
+        height: 180px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .button-holder {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: auto;
+    }
+    
+    .mobile-view {
+        height: 6vh;
+        display: block;
+    }
+}
