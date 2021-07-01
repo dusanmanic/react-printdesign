@@ -4,16 +4,16 @@ import {Link} from 'react-router-dom'
 
 import './menu-buttons.styles.css'
 
-const MenuButtons = ({style, click}) => (
-    <div className={style}>
+const MenuButtons = ({stil, click}) => (
+    <div className={stil}>
         <Link className='header-buttons' to='/' onClick={click}>
             POČETNA
         </Link>
         <Link className='header-buttons' to='onama' onClick={click}>
             O NAMA
         </Link>
-        <Link className='header-buttons' to='proizvodi' onClick={click}>
-            PROIZVODI
+        <Link className='header-buttons' to='galerija' onClick={click}>
+            GALERIJA
         </Link>
         <Link className='header-buttons' to='kontakt' onClick={click}>
             KONTAKT

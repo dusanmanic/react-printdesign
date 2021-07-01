@@ -1,10 +1,10 @@
 import React from 'react';
 
-import {Switch, Route, Redirect} from 'react-router-dom'
+import {Switch, Route} from 'react-router-dom'
 
 import HomePage from './pages/homepage/homepage.component'
 import AboutUs from './pages/about-us-page/about-us-page.component'
-import {Header} from './components/header/header.component'
+import Header from './components/header/header.component'
 
 import './App.css';
 

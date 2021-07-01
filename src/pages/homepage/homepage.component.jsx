@@ -1,6 +1,6 @@
 import React from 'react';
 
-import {ImgSlider} from '../../components/imgSlider/imgSlider.component'
+import ImgSlider from '../../components/imgSlider/imgSlider.component'
 
 import './homepage.styles.css'
 
