@@ -20,15 +20,23 @@ function Header() {
     return(
             <div className="container">
                 <div className='header'>
-                    <div className="logo-holder" style={{backgroundImage: `url(${Logo})`}} />        
+                    <div className="logo-holder" style={{backgroundImage: `url(${Logo})`}} />         
                     <div className="button-holder">
                         <button className="mobile-view" onClick={toggleMenu}>MENU</button>
                         <MenuButtons stil={"pc-buttons"} />
                     </div>
                     <div className="signin-holder">
-                        <Link className='header-buttons' to='signin'>
-                            SIGN IN
-                        </Link>
+                        <div className='header-buttons'>
+                            {( () => {
+                                if(localStorage.getItem('userLog') !== null) {
+                                    console.log(localStorage.getItem('userLog'))
+                                    console.log('1')
+                                    return <Link to='adminpanel'> PANEL </Link>
+                                } else {
+                                    return <Link to='signin'> SIGN IN </Link>
+                                }
+                            }) ()}
+                        </div>
                     </div>
                 </div>
                 <div className="drop-down">

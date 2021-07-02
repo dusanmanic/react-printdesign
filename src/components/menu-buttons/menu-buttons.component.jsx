@@ -9,13 +9,13 @@ const MenuButtons = ({stil, click}) => (
         <Link className='header-buttons' to='/' onClick={click}>
             POČETNA
         </Link>
-        <Link className='header-buttons' to='onama' onClick={click}>
+        <Link className='header-buttons' to='/onama' onClick={click}>
             O NAMA
         </Link>
-        <Link className='header-buttons' to='galerija' onClick={click}>
+        <Link className='header-buttons' to='/galerija' onClick={click}>
             GALERIJA
         </Link>
-        <Link className='header-buttons' to='kontakt' onClick={click}>
+        <Link className='header-buttons' to='/kontakt' onClick={click}>
             KONTAKT
         </Link>
     </div>

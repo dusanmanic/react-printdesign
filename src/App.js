@@ -1,21 +1,42 @@
-import React from 'react';
+import React, {Fragment, useState} from 'react';
 
 import {Switch, Route} from 'react-router-dom'
 
 import HomePage from './pages/homepage/homepage.component'
 import AboutUs from './pages/about-us-page/about-us-page.component'
 import Header from './components/header/header.component'
+import SignIn from './pages/signin-page/signin.component'
+import AdminPanel from './pages/adminpanel/adminpanel.component'
+import Gallery from './pages/gallery/gallery.component';
+import ImageGallery from './pages/imagegallery/imagegallery.component';
+
+import { Context } from './context/context';
 
 import './App.css';
 
 function App() {
+
+  const [galleryName, setGalleryName] = useState('')
+
+  let contextObject = {
+    galleryName: [galleryName, setGalleryName]
+  }
+  
   return (
     <div className="App">
-      <Header />
-      <Switch>
-          <Route exact path='/' component={HomePage} />
-          <Route exact path='/onama' component={AboutUs} />
-      </Switch>
+      <Context.Provider value={contextObject}>
+        <Switch>
+          <Route exact path='/adminpanel' component={AdminPanel} />
+          <Fragment>
+            <Header />
+              <Route exact path='/' component={HomePage} />
+              <Route exact path='/onama' component={AboutUs} />
+              <Route exact path='/signin' component={SignIn} />
+              <Route exact path='/galerija' component={Gallery} />
+              <Route exact path={`/slike/${galleryName}`} render={() => <ImageGallery collectionName={galleryName}/>} />
+          </Fragment>
+        </Switch>
+      </Context.Provider>
     </div>
   )
 }

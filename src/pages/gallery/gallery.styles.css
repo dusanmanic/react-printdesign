@@ -1,0 +1,9 @@
+.gallery-page-wrapper {
+    width: 70vw;
+    height: 94vh;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: space-around;
+}

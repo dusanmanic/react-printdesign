@@ -1,0 +1,96 @@
+.sign-in-page {
+    /* background-color: blue; */
+    width: 100vw;
+    height: 85vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.signin-form {
+    width: 350px;
+}
+
+.signin-wrapper {
+    position: relative;
+}
+
+.signin-label {
+    font-family: Poppins;
+    position: absolute;
+    font-size: 1.25rem;
+    left: 15px;
+    pointer-events: none;
+    color: rgb(85, 85, 85);
+    transition: all .22s;
+    top: 50%;
+    transform: translateY(-50%);
+    display: block;
+}
+
+.signin-input{
+    font-family: Poppins;
+    width: 100%;
+    padding: 10px;
+    margin: 15px 0;
+    border: none;
+    color: #4e4e4e;
+    font-size: 1.125rem;
+    border: 0;
+    outline: 0;
+    background: transparent;
+    border-bottom: 1px solid rgb(85, 85, 85);
+}
+
+.signin-input:focus + label,
+.signin-input:hover + label,
+.signin-input:valid + label
+{
+    top: 0;
+    font-size: 1.125rem;
+    transform: translateY(0);
+    left: 0;
+    opacity: 1;
+}
+
+.signin-input:-webkit-autofill,
+.signin-input:-webkit-autofill:hover, 
+.signin-input:-webkit-autofill:focus, 
+.signin-input:-webkit-autofill:active
+{
+    box-shadow: 0 0 0 30px white inset !important;
+}
+
+.submit-button {
+    width: 150px;
+    height: 50px;
+    background-color: rgb(61, 131, 211);
+    border-radius: 12px;
+    padding: 12px;
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    cursor:pointer;
+    pointer-events: all;
+}
+
+.signin-button-wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+.submit-button-disable {
+    display: none;
+}
+
+.submit-spiner-enable {
+    display: block;
+    width: 50px;
+    height: 50px;
+}
+
+.submit-spiner-disable {
+    display: none;
+}
