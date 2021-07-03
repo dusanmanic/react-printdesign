@@ -1,9 +1,6 @@
 .gallery-page-wrapper {
-    width: 70vw;
-    height: 94vh;
+    width: 680px;
     margin: auto;
     display: flex;
-    flex-direction: row;
     flex-wrap: wrap;
-    align-content: space-around;
 }

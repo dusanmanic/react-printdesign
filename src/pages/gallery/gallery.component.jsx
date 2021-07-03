@@ -14,6 +14,7 @@ export default function Gallery() {
 
     const {galleryName} = useContext(Context)
     const [galeryName, setGaleryName] = galleryName
+
     const [galleryTumb, setGalleryTumb] = useState([])
 
     const openCurrentGallery = event => {
@@ -43,8 +44,15 @@ export default function Gallery() {
         <div className="gallery-page-wrapper">
             {
                 galleryTumb.map((data, index) => {
-                    console.log(data.name)
-                    return  <GalleryTumb key={index} dataID={data.id} klikFunkcija={openCurrentGallery} tumbBckImg={data.tumbUrl} tumbName={data.name.charAt(0).toUpperCase() + data.name.toLowerCase().slice(1)} />
+                    // console.log(data.name)
+                    return  (
+                        <GalleryTumb
+                        key={index}
+                        dataID={data.id}
+                        klikFunkcija={openCurrentGallery}
+                        tumbBckImg={data.tumbUrl}
+                        tumbName={data.name.charAt(0).toUpperCase() + data.name.toLowerCase().slice(1)} />
+                    )
                 })
             }
         </div>

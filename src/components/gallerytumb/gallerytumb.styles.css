@@ -3,11 +3,10 @@
     justify-content: center;
     width: 150px;
     height: 100px;
-    margin: 10px;
     background-size: cover;
     background-repeat: no-repeat;
     border-radius: 15px;
-    margin: 5px;
+    margin: 10px;
     cursor: pointer;
 }
 

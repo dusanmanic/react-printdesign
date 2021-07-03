@@ -9,6 +9,7 @@ import SignIn from './pages/signin-page/signin.component'
 import AdminPanel from './pages/adminpanel/adminpanel.component'
 import Gallery from './pages/gallery/gallery.component';
 import ImageGallery from './pages/imagegallery/imagegallery.component';
+import FullScreenImg from './pages/fullscreenimg/fullscreenimg.component';
 
 import { Context } from './context/context';
 
@@ -17,9 +18,13 @@ import './App.css';
 function App() {
 
   const [galleryName, setGalleryName] = useState('')
+  const [imgsUrls, setImgsUrls] = useState([])
+  const [clickedImage, setClikedImage] = useState('')
 
   let contextObject = {
-    galleryName: [galleryName, setGalleryName]
+    galleryName: [galleryName, setGalleryName],
+    fullScreen: [imgsUrls, setImgsUrls],
+    clickedImage: [clickedImage, setClikedImage]
   }
   
   return (
@@ -33,7 +38,10 @@ function App() {
               <Route exact path='/onama' component={AboutUs} />
               <Route exact path='/signin' component={SignIn} />
               <Route exact path='/galerija' component={Gallery} />
-              <Route exact path={`/slike/${galleryName}`} render={() => <ImageGallery collectionName={galleryName}/>} />
+              <Route exact path={`/fullscreen/${galleryName}`}render={() =>
+                <FullScreenImg imgUrl={imgsUrls} clickedImgUrl={clickedImage}/>} />
+              <Route exact path={`/slike/${galleryName}`} render={() =>
+                <ImageGallery collectionName={galleryName}/>} />
           </Fragment>
         </Switch>
       </Context.Provider>

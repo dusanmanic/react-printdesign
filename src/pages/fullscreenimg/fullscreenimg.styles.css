@@ -1,0 +1,28 @@
+.fullscreenimg-wrapper {
+    width: 100vw;
+    height: 94vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.fullscreenimg {
+    width: 90vw;
+    height: 90vh;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.leftButton, .exitButton, .rightButton {
+    width: 150px;
+    height: 50px;
+    margin: 15px;
+    font-family: Poppins;
+    background-color: rgb(61, 131, 211);
+    border-radius: 12px;
+    border: none;
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    cursor: pointer;
+}

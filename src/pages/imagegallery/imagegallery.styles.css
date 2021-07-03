@@ -1,0 +1,16 @@
+.imagegallery-page-wrapper {
+    width: 800px;
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;
+    cursor: pointer;
+}
+
+.slikaImg {
+    width: 150px;
+    height: 100px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    border-radius: 15px;
+    margin: 5px;
+}
