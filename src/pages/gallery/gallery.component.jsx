@@ -58,15 +58,3 @@ export default function Gallery() {
         </div>
     )
 }
-
-
-// {(() => {
-//     if(galleryTumb.length !== 0) {
-//         galleryTumb.map( data => {
-//             console.log(data.name)
-//             return <div>
-//                 <p>{data.name}</p>
-//             </div>
-//         })
-//     }
-// }) ()}
