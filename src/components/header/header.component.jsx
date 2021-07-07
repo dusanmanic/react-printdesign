@@ -29,11 +29,9 @@ function Header() {
                         <div className='header-buttons'>
                             {( () => {
                                 if(localStorage.getItem('userLog') !== null) {
-                                    console.log(localStorage.getItem('userLog'))
-                                    console.log('1')
-                                    return <Link to='adminpanel'> PANEL </Link>
+                                    return <Link to='/adminpanel'> PANEL </Link>
                                 } else {
-                                    return <Link to='signin'> SIGN IN </Link>
+                                    return <Link to='/signin'> SIGN IN </Link>
                                 }
                             }) ()}
                         </div>

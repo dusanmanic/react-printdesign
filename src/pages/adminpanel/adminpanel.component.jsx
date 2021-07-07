@@ -5,6 +5,12 @@ import './adminpanel.styles.css'
 
 import {firestore} from '../../firebase/firebase.utils'
 
+import ImageGalleryUpload from '../../components/imageGalleryUpload/imagegalleryupload.component'
+import SliderImageUpload from '../../components/sliderimageupload/sliderimageupload.component'
+import LoadToPanel from '../../components/loadToImagesPanel/loadtopanel.component'
+import AddGallery from '../../components/addGallery/addgallery.component'
+import LoadImages from '../../components/loadImages/loadimages.component'
+
  
 function AdminPanel() {
 
@@ -63,6 +69,15 @@ function AdminPanel() {
                                 <button className="home-button" onClick={() => history.push('/')}>Home</button> 
                                 <button className="log-out-button" onClick={logOut}>Log out</button>
                             </div>
+                            <div className="black-line" />
+                            <div className="upload-wrapper">
+                                <AddGallery />
+                                <ImageGalleryUpload />
+                                <SliderImageUpload />
+                                <LoadToPanel />
+                            </div>
+                            <div className="black-line" />
+                            <LoadImages />
                         </div>
                     )
                 }

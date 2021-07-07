@@ -1,0 +1,22 @@
+.joinus-label {
+    font-family: Poppins;
+    font-weight: 600;
+    font-size: 1rem;
+    left: 15px;
+    pointer-events: none;
+    color: rgb(85, 85, 85);
+    display: block;
+}
+
+.joinus-input{
+    font-family: Poppins;
+    width: 250px;
+    margin: 0 0 5px 0;
+    border: none;
+    color: #4e4e4e;
+    font-size: 1rem;
+    border: 0;
+    outline: 0;
+    background: transparent;
+    border-bottom: 1px solid rgb(85, 85, 85);
+}

@@ -38,8 +38,10 @@ export default function FullScreenImg({imgUrl, clickedImgUrl}) {
     }
 
     const PreviousImage = () => {
-        imgsUrls.forEach((img , index) => {
+
+        imgsUrls.forEach((img , index) => {            
             if(currentImageUrl === img) {
+                // console.log(index)
                 previousImageIndex = index - 1                  
             }
         })
@@ -48,9 +50,11 @@ export default function FullScreenImg({imgUrl, clickedImgUrl}) {
                 setCurrentImageUrl(img)
             }
         })
-        if(previousImageIndex === 0) {
-            console.log('uslo ovde')
-            setCurrentImageUrl(imgsUrls[imgsUrls.length - 1])
+        console.log(previousImageIndex)
+
+        if(previousImageIndex === -1) {
+            // console.log(imgsUrls[imgsUrls.length-1])
+            setCurrentImageUrl(imgsUrls[imgsUrls.length-1])
             nextImageIndex = 0
         }
     }
@@ -62,9 +66,11 @@ export default function FullScreenImg({imgUrl, clickedImgUrl}) {
     return (
         <div className={"fullscreenimg-wrapper"}>
             <div className={"fullscreenimg"} style={{backgroundImage: `url("${currentImageUrl}")`}} >
+            <div className="fullscreen-button-wrapper">
                 <button className="previous-button" onClick={PreviousImage}>Previous</button> 
                 <button className="exit-button" onClick={ExitImage} >Exit</button> 
                 <button className="next-button" onClick={NextImage}>Next</button>
+            </div>
             </div>
         </div>
     )

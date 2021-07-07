@@ -13,11 +13,10 @@
 }
 
 .logo-holder {
-    width: 70px;
-    height: 30px;
+    width: 150px;
+    height: 50px;
     background-size: cover;
     background-position: center;
-    margin-top: 11px;
     position: relative;
     z-index: 12;
     margin-left: 15px;
@@ -36,7 +35,7 @@
 }
 
 button {    
-    color:red;
+    color: white;
     font-size: 15px; 
     background-color: transparent;
     background-repeat:no-repeat;
@@ -54,7 +53,7 @@ button:focus {outline:0;}
 
 a {
     text-decoration: none;
-    color:red;
+    color: white;
     font-size: 15px;
 }
 

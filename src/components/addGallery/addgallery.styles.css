@@ -1,0 +1,17 @@
+.add-gallery-span {
+    font-family: Poppins;
+    font-weight: 600;
+    font-size: 15px;
+    left: 12px;
+    pointer-events: none;
+    color: rgb(85, 85, 85);
+    display: block;
+    margin: 0 0 10px 0
+
+}
+
+.add-gallery-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}

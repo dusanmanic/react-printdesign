@@ -10,6 +10,7 @@ import AdminPanel from './pages/adminpanel/adminpanel.component'
 import Gallery from './pages/gallery/gallery.component';
 import ImageGallery from './pages/imagegallery/imagegallery.component';
 import FullScreenImg from './pages/fullscreenimg/fullscreenimg.component';
+import Contact from './pages/contact/contact.component';
 
 import { Context } from './context/context';
 
@@ -20,11 +21,15 @@ function App() {
   const [galleryName, setGalleryName] = useState('')
   const [imgsUrls, setImgsUrls] = useState([])
   const [clickedImage, setClikedImage] = useState('')
+  const [selectedGallery, setSelectedGallery] = useState([])
+  const [selectedSlider, setSelectedSlider] = useState([])
 
   let contextObject = {
     galleryName: [galleryName, setGalleryName],
     fullScreen: [imgsUrls, setImgsUrls],
-    clickedImage: [clickedImage, setClikedImage]
+    clickedImage: [clickedImage, setClikedImage],
+    selectedGallery: [selectedGallery, setSelectedGallery],
+    selectedSlider: [selectedSlider, setSelectedSlider]
   }
   
   return (
@@ -38,10 +43,16 @@ function App() {
               <Route exact path='/onama' component={AboutUs} />
               <Route exact path='/signin' component={SignIn} />
               <Route exact path='/galerija' component={Gallery} />
-              <Route exact path={`/fullscreen/${galleryName}`}render={() =>
-                <FullScreenImg imgUrl={imgsUrls} clickedImgUrl={clickedImage}/>} />
-              <Route exact path={`/slike/${galleryName}`} render={() =>
-                <ImageGallery collectionName={galleryName}/>} />
+              <Route exact path={`/fullscreen/${galleryName}`} 
+              render={() =>
+                <FullScreenImg
+                imgUrl={imgsUrls}
+                clickedImgUrl={clickedImage}/>} />
+              <Route exact path={`/slike/${galleryName}`} 
+              render={() =>
+                <ImageGallery
+                collectionName={galleryName}/>} />
+              <Route exact path='/kontakt' component={Contact} />
           </Fragment>
         </Switch>
       </Context.Provider>

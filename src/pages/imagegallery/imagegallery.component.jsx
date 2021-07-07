@@ -46,18 +46,20 @@ export default function ImageGallery({collectionName}) {
 
     return(
         <div className={"imagegallery-page-wrapper"}>
-            {
-                currentGallery.map((data, index) => {
-                    return (
-                        <div
-                        key={index}
-                        id={randomToken}
-                        className={"slikaImg"}
-                        style={{backgroundImage: `url("${data.downLink}")`}} 
-                        onClick={FullScreenImage} />
-                    )
-                })
-            }
+            <div className="gallery-wrapper">
+                {
+                    currentGallery.map((data, index) => {
+                        return (
+                            <div
+                            key={index}
+                            id={randomToken}
+                            className={"slikaImg"}
+                            style={{backgroundImage: `url("${data.downLink}")`}} 
+                            onClick={FullScreenImage} />
+                        )
+                    })
+                }
+            </div>
         </div>
     )
 }

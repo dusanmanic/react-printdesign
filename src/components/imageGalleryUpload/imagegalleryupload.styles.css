@@ -1,0 +1,64 @@
+.custom-file-upload {
+    font-family: Poppins;
+    width: 250px;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.black-line {
+    width: 100vw;
+    height: 1px;
+    background-color: black;
+    margin: 10px 0;
+}
+
+.image-gallery-upload-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+span {
+    font-family: Poppins;
+    font-weight: 600;
+    font-size: 1rem;
+    left: 15px;
+    pointer-events: none;
+    color: rgb(85, 85, 85);
+    display: block;
+}
+
+.upload-button-wrapper {
+    width: 250px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+}
+
+.submit-upload-button {    
+    width: 100px;
+    height: 50px;
+    background-color: rgb(61, 131, 211);
+    border-radius: 12px;
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    font-size: 15px;
+    cursor:pointer;
+    pointer-events: all;
+}
+
+.upload-button-disable {
+    display: none;
+}
+
+.upload-spiner-enable {
+    display: block;
+    width: 50px;
+    height: 50px;
+}
+
+.upload-spiner-disable {
+    display: none;
+}

@@ -1,7 +1,7 @@
 .imagegallery-page-wrapper {
     width: 800px;
     display: flex;
-    flex-wrap: wrap;
+    align-items: center;
     margin: auto;
     cursor: pointer;
 }
@@ -13,4 +13,30 @@
     background-repeat: no-repeat;
     border-radius: 15px;
     margin: 5px;
+}
+
+.gallery-wrapper {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+
+@media only screen and (max-width: 810px){
+    
+    .imagegallery-page-wrapper {
+        width: 100vw;
+        display: flex;
+        margin: auto;
+        margin: auto;
+        cursor: pointer;
+    }
+
+    .gallery-wrapper {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
+
 }

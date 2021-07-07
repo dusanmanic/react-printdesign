@@ -1,0 +1,18 @@
+.list-image {
+    width: 150px;
+    height: 90px;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.load-images-wrapper {    
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+.trash-img {
+    width: 25px;
+    cursor: pointer;
+}

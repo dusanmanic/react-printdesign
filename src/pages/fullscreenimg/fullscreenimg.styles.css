@@ -2,27 +2,31 @@
     width: 100vw;
     height: 94vh;
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
 }
 
 .fullscreenimg {
     width: 90vw;
-    height: 90vh;
+    height: calc(90vw/1.5);
     background-size: contain;
     background-repeat: no-repeat;
+    display: flex;
+    justify-content: space-around;
 }
 
-.leftButton, .exitButton, .rightButton {
-    width: 150px;
-    height: 50px;
-    margin: 15px;
+.previous-button, .exit-button, .next-button {
+    align-self: flex-end;
+    width: 33vw;
     font-family: Poppins;
-    background-color: rgb(61, 131, 211);
-    border-radius: 12px;
     border: none;
     color: white;
     text-decoration: none;
     font-size: 16px;
     cursor: pointer;
 }
+
+.fullscreen-button-wrapper {
+    display: flex;
+}
+

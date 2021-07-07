@@ -1,0 +1,23 @@
+.joinus-select {
+    width: 250px;
+    height: 25px;
+    margin: 5px 0;
+}
+
+.select-input-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.joinus-label {
+    font-family: Poppins;
+    font-weight: 600;
+    font-size: 1rem;
+    left: 15px;
+    pointer-events: none;
+    color: rgb(85, 85, 85);
+    display: block;
+}
+
+
