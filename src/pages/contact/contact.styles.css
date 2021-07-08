@@ -5,3 +5,25 @@
     justify-content: space-around;
     align-items: center;
 }
+
+.iframe-wrapper {
+    width: 550px;
+    height: 550px;
+}
+
+@media only screen and (max-width: 810px) {
+    
+    .containerKontakt {
+        width: 100vw;
+        height: 94vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .iframe-wrapper {
+        width: 90vw;
+        height: calc(90vw/0.9);
+    }
+}

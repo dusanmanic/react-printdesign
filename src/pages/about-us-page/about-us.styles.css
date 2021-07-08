@@ -9,3 +9,23 @@
 .divonama {
     overflow: auto;
 }
+
+@media only screen and (max-width: 810px) {
+    .about-us {
+        width: 90vw;
+        height: 94vh;
+        display: flex;
+        align-items: center;
+    
+    }
+    
+    .spanonama {
+        margin-left: 2vw;
+        margin-top: 6vh;
+
+    }
+
+    .divonama {
+        overflow: auto;
+    }
+}
