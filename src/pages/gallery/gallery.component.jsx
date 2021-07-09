@@ -9,10 +9,11 @@ import GalleryTumb from '../../components/gallerytumb/gallerytumb.component'
 import './gallery.styles.css'
 
 export default function Gallery() {
+    
 
     const history = useHistory()
 
-    const {galleryName} = useContext(Context)
+    const {galleryName, windowHeight} = useContext(Context)
     const [galeryName, setGaleryName] = galleryName
 
     const [galleryTumb, setGalleryTumb] = useState([])

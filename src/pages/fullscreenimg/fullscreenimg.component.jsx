@@ -66,11 +66,9 @@ export default function FullScreenImg({imgUrl, clickedImgUrl}) {
     return (
         <div className={"fullscreenimg-wrapper"}>
             <div className={"fullscreenimg"} style={{backgroundImage: `url("${currentImageUrl}")`}} >
-            <div className="fullscreen-button-wrapper">
                 <button className="previous-button" onClick={PreviousImage}>Previous</button> 
                 <button className="exit-button" onClick={ExitImage} >Exit</button> 
                 <button className="next-button" onClick={NextImage}>Next</button>
-            </div>
             </div>
         </div>
     )

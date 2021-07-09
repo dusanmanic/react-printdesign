@@ -29,7 +29,7 @@ function App() {
     fullScreen: [imgsUrls, setImgsUrls],
     clickedImage: [clickedImage, setClikedImage],
     selectedGallery: [selectedGallery, setSelectedGallery],
-    selectedSlider: [selectedSlider, setSelectedSlider]
+    selectedSlider: [selectedSlider, setSelectedSlider],
   }
   
   return (

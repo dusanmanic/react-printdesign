@@ -7,9 +7,10 @@
 }
 
 .fullscreenimg {
-    width: 95vw;
-    height: calc(90vw/1.1);
+    width: calc(90vh * 1.8);
+    height: 90vh;
     background-size: contain;
+    background-position: center;
     background-repeat: no-repeat;
     display: flex;
     justify-content: space-around;
@@ -17,16 +18,37 @@
 
 .previous-button, .exit-button, .next-button {
     align-self: flex-end;
-    width: 33vw;
+    width: 20vw;
     font-family: Poppins;
     border: none;
-    color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
     text-decoration: none;
     font-size: 16px;
     cursor: pointer;
+    background-color: rgb(50, 50, 50);
 }
 
-.fullscreen-button-wrapper {
-    display: flex;
-}
 
+@media only screen and (max-width: 810px) {
+
+    .fullscreenimg {
+        width: 95vw;
+        height: calc(90vw/1.1);
+        background-size: contain;
+        background-repeat: no-repeat;
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .previous-button, .exit-button, .next-button {
+        align-self: flex-end;
+        width: 33vw;
+        font-family: Poppins;
+        border: none;
+        color: rgb(0, 0, 0);
+        text-decoration: none;
+        font-size: 16px;
+        cursor: pointer;
+        background-color: white;
+    }
+}

@@ -39,7 +39,7 @@ function AdminPanel() {
         userLoggedInfo.get().then( querySnapshot => {
             querySnapshot.forEach( doc => {
                 let user = doc.data()
-                console.log(user)
+                // console.log(user)
 
                 let compareDate = new Date(user.loggedDate.toDate())
                 compareDate.setMinutes(new Date().getMinutes() + 30)
@@ -47,11 +47,14 @@ function AdminPanel() {
                 // console.log(currentDate < compareDate)
                 
                 if(user.username === localStorage.getItem("userLog") && user.strToken === localStorage.getItem("userToken") && currentDate < compareDate ) {
+                    console.log("1. if")
                     setLogged(true)
                 } else if(user.username === localStorage.getItem("userLog") && user.strToken !== localStorage.getItem("userToken") && currentDate < compareDate) {
+                    console.log("2. if")
                     localStorage.clear()
                     window.location.href = "/signin"
                 } else if(user.username === localStorage.getItem("userLog") && user.strToken === localStorage.getItem("userToken") && currentDate > compareDate ) {
+                    console.log("3. if")
                     localStorage.clear()
                     window.location.href = "/signin"
                 }
