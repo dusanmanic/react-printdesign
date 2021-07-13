@@ -58,7 +58,7 @@ export default function ImageGalleryUpload() {
 
     const SubmitImages = event => {
         event.preventDefault()
-        this.counter = 0
+        let counter = 0
 
         if(arrayOfImages.length === 0) {
             alert("Izaberi fotografije")
@@ -125,7 +125,7 @@ export default function ImageGalleryUpload() {
                                 // For instance, get the download URL: https://firebasestorage.googleapis.com/...
                                 uploadTask.snapshot.ref.getDownloadURL().then(function(downloadURL) {
                                     console.log('File available at', downloadURL);
-                                        this.counter++
+                                        counter++
         
                                         let dodaj = {
                                             info: {
@@ -145,7 +145,7 @@ export default function ImageGalleryUpload() {
                                         firestore.collection('galerijaKategorije').doc(`${selectedCategory}`).update(tumb)  
                 
                                     }).then(() => {
-                                        if(this.counter === arrayOfImages.length) {
+                                        if(counter === arrayOfImages.length) {
                                             setTimeout(() => {
                                                 setSubmitDisable("")
                                                 setSpinerEnable("upload-spiner-disable")
