@@ -12,6 +12,8 @@ import ImageGallery from './pages/imagegallery/imagegallery.component';
 import FullScreenImg from './pages/fullscreenimg/fullscreenimg.component';
 import Contact from './pages/contact/contact.component';
 
+// import MessengerCustomerChat from 'react-messenger-customer-chat'
+
 import { Context } from './context/context';
 
 import './App.css';
@@ -38,6 +40,7 @@ function App() {
         <Switch>
           <Route exact path='/adminpanel' component={AdminPanel} />
           <Fragment>
+            {/* <MessengerCustomerChat pageId="" appId="409787540395619" /> */}
             <Header />
               <Route exact path='/' component={HomePage} />
               <Route exact path='/onama' component={AboutUs} />

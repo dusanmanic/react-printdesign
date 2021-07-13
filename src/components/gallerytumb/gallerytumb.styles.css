@@ -1,12 +1,13 @@
 .tumbHolder {
     display: flex;
     justify-content: center;
-    width: 150px;
-    height: 100px;
+    width: 256px;
+    height: 160px;
     background-size: cover;
+    background-position: center;
     background-repeat: no-repeat;
     border-radius: 15px;
-    margin: 10px;
+    margin: 5px;
     cursor: pointer;
 }
 
@@ -17,4 +18,21 @@
     height: 20px;
     border-radius: 15px 15px 0px 0px;
     background-color: white;
+}
+
+@media only screen and (max-width: 810px){
+    
+    .tumbHolder {
+        display: flex;
+        justify-content: center;
+        width: 150px;
+        height: 100px;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        border-radius: 15px;
+        margin: 10px;
+        cursor: pointer;
+    }
+
 }

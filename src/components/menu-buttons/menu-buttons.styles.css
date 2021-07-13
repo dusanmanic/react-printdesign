@@ -14,7 +14,7 @@
 }
 
 .dropdown-show {
-    margin-top: 0px;
+    margin-top: -2px;
     transition-property: all;
     transition-duration: .5s;  
 }
@@ -38,7 +38,7 @@
         flex-direction: column;
         align-items: center;
         justify-content: space-around;
-        background-color: rgb(100, 100, 100);
+        background-color: rgb(50, 50, 50);
     }
 
 }

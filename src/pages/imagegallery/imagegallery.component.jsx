@@ -15,7 +15,7 @@ export default function ImageGallery({collectionName}) {
     if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
         defaultLoadNumber = Math.floor(window.innerHeight / 100) * Math.floor(window.innerWidth / 160)
     } else {
-        defaultLoadNumber = Math.floor(window.innerHeight / 100 * 5) // 100px height slike, 5 slika ima u redu
+        defaultLoadNumber = Math.floor(window.innerHeight / 160 * 3) // 100px height slike, 5 slika ima u redu
     }
 
     //(window.innerHeight + window.scrollY) >= document.documentElement.offsetHeight // Provera da li je scroll dosao do kraja

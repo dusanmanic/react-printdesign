@@ -110,7 +110,7 @@ export default function LoadToPanel() {
             firestore.collection('galerijaKategorije').doc(`${selectedCategory}`).delete()
 
             storage.ref(`${selectedCategory}`).listAll().then((listResults) => {
-                listResults.items.map(item => {
+                listResults.items.forEach(item => {
                     item.delete()
                 })
             })

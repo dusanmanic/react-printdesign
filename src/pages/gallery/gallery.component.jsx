@@ -13,7 +13,7 @@ export default function Gallery() {
 
     const history = useHistory()
 
-    const {galleryName, windowHeight} = useContext(Context)
+    const {galleryName} = useContext(Context)
     const [galeryName, setGaleryName] = galleryName
 
     const [galleryTumb, setGalleryTumb] = useState([])

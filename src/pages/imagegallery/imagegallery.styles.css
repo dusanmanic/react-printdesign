@@ -7,9 +7,10 @@
 }
 
 .slikaImg {
-    width: 150px;
-    height: 100px;
-    background-size: contain;
+    width: 256px;
+    height: 160px;
+    background-size: cover;
+    background-position: center;
     background-repeat: no-repeat;
     border-radius: 15px;
     margin: 5px;
@@ -27,7 +28,6 @@
         width: 100vw;
         display: flex;
         margin: auto;
-        margin: auto;
         cursor: pointer;
     }
 
@@ -36,6 +36,16 @@
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: space-evenly;
+    }
+
+    .slikaImg {
+        width: 150px;
+        height: 100px;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        border-radius: 15px;
+        margin: 5px;
     }
 
 }

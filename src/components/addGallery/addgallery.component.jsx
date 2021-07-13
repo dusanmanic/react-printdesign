@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react'
+import React, {useState} from 'react'
 
 import './addgallery.styles.css'
 
@@ -9,8 +9,8 @@ import InputComponent from '../input-component/input.component'
 
 export default function AddGallery() {
 
-    const [submitDisable, setSubmitDisable] = useState('')
-    const [spinerEnable, setSpinerEnable] = useState('submit-spiner-disable')
+    const [setSubmitDisable, submitDisable] = useState('')
+    const [setSpinerEnable, spinerEnable] = useState('submit-spiner-disable')
 
     const [galleryName, setGalleryName] = useState("")
 
