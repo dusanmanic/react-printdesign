@@ -9,8 +9,8 @@ import InputComponent from '../input-component/input.component'
 
 export default function AddGallery() {
 
-    const [setSubmitDisable, submitDisable] = useState('')
-    const [setSpinerEnable, spinerEnable] = useState('submit-spiner-disable')
+    const [submitDisable, setSubmitDisable] = useState('')
+    const [spinerEnable, setSpinerEnable] = useState('submit-spiner-disable')
 
     const [galleryName, setGalleryName] = useState("")
 
