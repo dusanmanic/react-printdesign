@@ -54,8 +54,8 @@ export default function SignIn() {
                 }
             }
         })
-        console.log(event.target.username.value)
-        console.log(event.target.password.value)
+        // console.log(event.target.username.value)
+        // console.log(event.target.password.value)
     }
 
     return(

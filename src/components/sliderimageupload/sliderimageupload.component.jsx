@@ -98,11 +98,11 @@ export default function SliderImageUpload() {
     }    
 
     return (
-        <div className={"image-gallery-upload-wrapper"}>
-            <span> Upload files for slider</span>
-            <form className={"upload-gallery-form"}>
+        <div className="image-gallery-upload-wrapper">
+            <span className="span-ce">  Upload files for slider</span>
+            <form className="upload-gallery-form">
                 {/* {console.log(arrayOfCategory)} */}
-                <input className={"custom-file-upload"} type="file" name="files" onChange={UploadImage} multiple/>
+                <input className="custom-file-upload" type="file" name="files" onChange={UploadImage} multiple/>
                 <SectionComponent name={"image-category"} options={arrayOfOptions} selectCategory={SelectCategory} />
                 <div className="upload-button-wrapper">
                     <img className={`${spinerEnable}`} src={Spiner} alt=""/>

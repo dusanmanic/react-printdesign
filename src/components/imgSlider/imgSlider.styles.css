@@ -2,6 +2,8 @@
     width: 100vw;
     height: 94vh;
     background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     transition: background-image 1.2s ease-in-out;
 }
 

@@ -5,8 +5,8 @@ import './about-us.styles.css'
 
 const AboutUs = () => (
     <div className="about-us">
-        <div className={"divonama"}>
-            <span className={"spanonama"}>
+        <div className="divonama">
+            <span className="span-ce spanonama">
             <br/><br/><br/><br/><br/><br/>
             Brzom ponudom, ekspertizom i kvalitetnim rešenjima, <br/>
             Print Design svojim partnerima pruža rešenja za kompletno

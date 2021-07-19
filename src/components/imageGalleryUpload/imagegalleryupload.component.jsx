@@ -169,11 +169,11 @@ export default function ImageGalleryUpload() {
     }    
 
     return (
-        <div className={"image-gallery-upload-wrapper"}>
-            <span> Upload files to gallery</span>
-            <form className={"upload-gallery-form"}>
+        <div className="image-gallery-upload-wrapper">
+            <span className="span-ce"> Upload files to gallery</span>
+            <form className="upload-gallery-form">
                 {/* {console.log(arrayOfCategory)} */}
-                <input className={"custom-file-upload"} type="file" name="files" onChange={UploadImage} multiple/>
+                <input className="custom-file-upload" type="file" name="files" onChange={UploadImage} multiple/>
                 <SectionComponent name={"image-category"} options={arrayOfCategory} selectCategory={SelectCategory} />
                 <div className="upload-button-wrapper">
                     <img className={`${spinerEnable}`} src={Spiner} alt=""/>

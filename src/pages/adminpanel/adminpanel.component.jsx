@@ -67,13 +67,13 @@ function AdminPanel() {
             {( () => {
                 if(logged) {
                     return (
-                        <div className="panel-wrapper">
+                        <div className="adminpanel-wrapper">
                             <div className="panel-buttons">
                                 <button className="home-button" onClick={() => history.push('/')}>Home</button> 
                                 <button className="log-out-button" onClick={logOut}>Log out</button>
                             </div>
                             <div className="black-line" />
-                            <div className="upload-wrapper">
+                            <div className="adminpanel-upload-wrapper">
                                 <AddGallery />
                                 <ImageGalleryUpload />
                                 <SliderImageUpload />

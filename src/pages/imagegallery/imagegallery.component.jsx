@@ -55,18 +55,26 @@ export default function ImageGallery({collectionName}) {
             let allDocs = querySnapshot.docs
             allDocs.forEach( (doc, index) => {
                 let data = doc.data()
+                console.log(data)
                 currentGalleryArray.push(data)
                 currentGalleryArrayUrls.push(data.downLink)                
             })            
         })
-        .then(() => {            
+        .then(() => {
+            console.log(currentGalleryArray)
+            currentGalleryArray.sort(function(a, b){
+                // Turn your strings into dates, and then subtract them
+                // to get a value that is either negative, positive, or zero.
+                return b.datum - a.datum
+              });
+            console.log(currentGalleryArray)
             setCurrentGallery(currentGalleryArray)
             setCurrentGalleryUrls(currentGalleryArrayUrls)
         })
     }, [])
 
     return(
-        <div className={"imagegallery-page-wrapper"} ref={componentRef}>
+        <div className="imagegallery-page-wrapper" ref={componentRef}>
             <div className="gallery-wrapper" >
                 {console.log(loadImagesLazyLoading)}
                 {

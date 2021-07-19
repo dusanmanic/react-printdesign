@@ -124,9 +124,9 @@ export default function LoadToPanel() {
 
     return (
         <div className="del-imgs-from-server-wrapper">
-            <span>Učitaj galeriju:</span>
+            <span className="span-ce">Učitaj galeriju:</span>
             <div className="select-image-category">
-                <div className={"view-checkbox"}>
+                <div className="view-checkbox">
                     {
                         sliderView.map( (view, index) => {
                             return (
@@ -140,7 +140,7 @@ export default function LoadToPanel() {
                 </div>
                 <SectionComponent name={"image-category"} options={arrayOfCategory} selectCategory={SelectCategory}/>                
                 <div className="upload-button-wrapper">
-                    <button className={`submit-upload-button`} type="submit" value="Submit" onClick={ListImages}> Submit </button>
+                    <button className="submit-upload-button" type="submit" value="Submit" onClick={ListImages}> Submit </button>
                     <img className={`${spinerEnable}`} src={Spiner} alt=""/>
                     <button className={`submit-upload-button delete-button ${submitDisable}`} onClick={DeleteCategory}> Delete </button>                     
                 </div>

@@ -38,7 +38,7 @@ export default function AddGallery() {
 
     return (
         <div className="add-gallery-wrapper">
-            <span className={"add-gallery-span"}> Add new category</span>
+            <span className="add-gallery-span"> Add new category</span>
             <InputComponent label={"Ime galerije"}  type={"text"} name={"gallery"} required={"required"} handleChange={NewGallery} />
 
             <div className="upload-button-wrapper">

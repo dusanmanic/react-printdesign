@@ -1,6 +1,6 @@
 import React, {Fragment, useState} from 'react';
 
-import {Switch, Route} from 'react-router-dom'
+import {Switch, Route, useLocation} from 'react-router-dom'
 
 import HomePage from './pages/homepage/homepage.component'
 import AboutUs from './pages/about-us-page/about-us-page.component'
@@ -19,6 +19,9 @@ import { Context } from './context/context';
 import './App.css';
 
 function App() {
+  
+  const location = useLocation()
+  // console.log(location.pathname)
 
   const [galleryName, setGalleryName] = useState('')
   const [imgsUrls, setImgsUrls] = useState([])
@@ -39,23 +42,23 @@ function App() {
       <Context.Provider value={contextObject}>
         <Switch>
           <Route exact path='/adminpanel' component={AdminPanel} />
-          <Fragment>
-            <MessengerCustomerChat pageId="942679345771690" appId="409787540395619" />
+          <Fragment>          
             <Header />
-              <Route exact path='/' component={HomePage} />
-              <Route exact path='/onama' component={AboutUs} />
-              <Route exact path='/signin' component={SignIn} />
-              <Route exact path='/galerija' component={Gallery} />
-              <Route exact path={`/fullscreen/${galleryName}`} 
-              render={() =>
-                <FullScreenImg
-                imgUrl={imgsUrls}
-                clickedImgUrl={clickedImage}/>} />
-              <Route exact path={`/slike/${galleryName}`} 
-              render={() =>
-                <ImageGallery
-                collectionName={galleryName}/>} />
-              <Route exact path='/kontakt' component={Contact} />
+            <Route exact path='/' component={HomePage} />
+            <Route exact path='/onama' component={AboutUs} />
+            <Route exact path='/signin' component={SignIn} />
+            <Route exact path='/galerija' component={Gallery} />
+            <Route exact path={`/fullscreen/${galleryName}`} 
+            render={() =>
+              <FullScreenImg
+              imgUrl={imgsUrls}
+              clickedImgUrl={clickedImage}/>} />
+            <Route exact path={`/slike/${galleryName}`} 
+            render={() =>
+              <ImageGallery
+              collectionName={galleryName}/>} />
+            <Route exact path='/kontakt' component={Contact} />
+            <MessengerCustomerChat pageId="942679345771690" appId="409787540395619" />
           </Fragment>
         </Switch>
       </Context.Provider>
