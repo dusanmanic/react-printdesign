@@ -9,6 +9,7 @@
 .slikaImg {
     width: 256px;
     height: 160px;
+    background-color: red;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
