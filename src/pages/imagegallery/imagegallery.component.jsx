@@ -54,6 +54,8 @@ export default function ImageGallery({collectionName}) {
     
     useEffect(() => {        
         let currentGalleryArray = []
+        let currentGalleryArrayUrls = []
+        
         firestore.collection(`${collectionName}`)
         .get()
         .then(querySnapshot => {
@@ -61,7 +63,8 @@ export default function ImageGallery({collectionName}) {
             allDocs.forEach( (doc, index) => {
                 let data = doc.data()
                 // console.log(data)
-                currentGalleryArray.push(data)               
+                currentGalleryArray.push(data) 
+                currentGalleryArrayUrls.push(data.downLink)              
             })            
         })
         .then(() => {
@@ -73,6 +76,7 @@ export default function ImageGallery({collectionName}) {
               });
             console.log(currentGalleryArray)
             setCurrentGallery(currentGalleryArray)
+            setCurrentGalleryUrls(currentGalleryArrayUrls)
         })
     }, [])
 
